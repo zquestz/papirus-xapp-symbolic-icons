@@ -7,8 +7,9 @@ Reads the mapping produced by build_mapping.py and populates:
 Methods:
   copy      -- byte-for-byte copy of the Papirus source icon
   rtl-flip  -- horizontally mirrored copy (for -rtl variants Papirus lacks)
-  alias-*   -- same as the base method; mapping inherited from an upstream
-               alias group (byte-identical artwork under multiple names)
+
+Methods may carry an origin prefix (adwaita- | xapp- | alias-) recording how
+the mapping was derived; generation is identical either way.
 
 The output mirrors the Papirus theme layout so installation is a plain
 directory merge. Only the real symbolic dirs (16x16, 22x22, 24x24) are
@@ -65,7 +66,8 @@ def main() -> None:
         if not line or line.startswith("#"):
             continue
         xsi_name, papirus_name, method, contexts = line.split("\t")
-        method = method.removeprefix("alias-")
+        for prefix in ("adwaita-", "xapp-", "alias-"):
+            method = method.removeprefix(prefix)
 
         for entry in contexts.split(","):
             size, context = entry.split(":")

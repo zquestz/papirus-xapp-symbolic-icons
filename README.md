@@ -10,10 +10,12 @@ project provides the same icon names drawn from Papirus artwork, installed
 into the Papirus theme directories so `xsi-*` lookups resolve to
 Papirus-styled icons before falling back to hicolor.
 
+![All provided icons](preview.png)
+
 ## Coverage
 
-**550 of the 666 XSI icon names (83%)** are currently provided. The
-remaining 116 have no Papirus equivalent yet; they are listed in
+**615 of the 666 XSI icon names (92%)** are currently provided. The
+remaining 51 have no Papirus equivalent yet; they are listed in
 `mapping/unmapped.txt` and will keep resolving to the stock XSI artwork in
 hicolor until they are themed.
 
@@ -58,9 +60,12 @@ make icons
 ```
 
 - `tools/build_mapping.py` — matches upstream XSI names against the Papirus
-  symbolic inventory (exact name matches only; `-rtl` names fall back to
-  mirroring the LTR icon; byte-identical upstream alias groups inherit their
-  sibling's mapping). Writes `mapping/mapping.tsv` and `mapping/unmapped.txt`.
+  symbolic inventory. Matching uses exact names plus upstream's own
+  equivalence data (the adwaita→xsi rename table, the old `xapp-*` names,
+  and byte-identical alias groups); `-rtl` names fall back to mirroring the
+  LTR icon. Writes `mapping/mapping.tsv` and `mapping/unmapped.txt`.
+- `tools/suggest_matches.py` — review aid; lists fuzzy Papirus candidates
+  for still-unmapped names.
 - `tools/generate.py` — builds `icons/Papirus/<size>/symbolic/<context>/`
   from the mapping (plain copies, plus horizontally mirrored SVGs for RTL
   variants Papirus doesn't draw).

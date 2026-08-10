@@ -7,7 +7,7 @@ USERICONDIR = $(HOME)/.local/share/icons
 # refreshed or the variants keep serving stale lookups that miss our icons.
 VARIANTS = Papirus Papirus-Dark Papirus-Light
 
-.PHONY: all icons install install-user uninstall uninstall-user
+.PHONY: all icons preview install install-user uninstall uninstall-user
 
 all: icons
 
@@ -15,6 +15,10 @@ all: icons
 icons:
 	python3 tools/build_mapping.py
 	python3 tools/generate.py
+
+# Re-render preview.png (needs python-pillow and librsvg).
+preview:
+	python3 tools/preview.py
 
 # System-wide install: merge into the installed Papirus theme.
 # Papirus-Dark and Papirus-Light pick these up through their existing
