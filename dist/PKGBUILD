@@ -1,6 +1,6 @@
 # Maintainer: Josh Ellithorpe <quest@mac.com>
 pkgname=papirus-xapp-symbolic-icons-git
-pkgver=r5.05a12d8
+pkgver=r7.7308f85
 pkgrel=1
 pkgdesc="Papirus-styled versions of the xapp symbolic icons (XSI) used by Linux Mint, Cinnamon, and XApps"
 arch=('any')
