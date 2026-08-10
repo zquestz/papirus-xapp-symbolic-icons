@@ -1,0 +1,8 @@
+[submodule "vendor/papirus-icon-theme"]
+	path = vendor/papirus-icon-theme
+	url = https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+	shallow = true
+[submodule "vendor/xapp-symbolic-icons"]
+	path = vendor/xapp-symbolic-icons
+	url = https://github.com/xapp-project/xapp-symbolic-icons
+	shallow = true
