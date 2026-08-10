@@ -7,6 +7,10 @@ exact-name equivalent in the Papirus symbolic icon set:
   xsi-<name>-symbolic-rtl.svg  -> <name>-symbolic-rtl.svg   (exact rtl)
                                or <name>-symbolic.svg        (mirrored)
 
+Hand-curated mappings in mapping/overrides.tsv take precedence over all
+automatic stages; they hold the few cases where naming conventions disagree
+and the right match was verified by looking at the artwork.
+
 Names that don't match directly are resolved through upstream's own
 equivalence data -- still no artistic judgment on our side:
 
@@ -25,7 +29,7 @@ Output: mapping/mapping.tsv with columns:
   xsi_name   papirus_name   method   contexts(size:context,...)
 
 where method is copy | rtl-flip, optionally prefixed by its origin:
-adwaita- | xapp- | alias-.
+manual- | adwaita- | xapp- | alias-.
 """
 
 import hashlib
@@ -44,6 +48,7 @@ PAPIRUS = REPO / "vendor" / "papirus-icon-theme" / "Papirus"
 SIZES = ("16x16", "22x22", "24x24")
 
 MAPPING_TSV = REPO / "mapping" / "mapping.tsv"
+OVERRIDES_TSV = REPO / "mapping" / "overrides.tsv"
 UNMAPPED_TXT = REPO / "mapping" / "unmapped.txt"
 
 
@@ -66,6 +71,19 @@ def xsi_names() -> list[str]:
     if not XSI_DIR.is_dir():
         sys.exit(f"error: {XSI_DIR} not found (init submodules first)")
     return sorted(p.name for p in XSI_DIR.glob("*.svg"))
+
+
+def overrides() -> dict[str, str]:
+    """Read hand-curated xsi_name -> papirus_name mappings."""
+    result: dict[str, str] = {}
+    if not OVERRIDES_TSV.is_file():
+        return result
+    for line in OVERRIDES_TSV.read_text().splitlines():
+        if not line or line.startswith("#"):
+            continue
+        xsi_name, papirus_name = line.split("\t")
+        result[xsi_name] = papirus_name
+    return result
 
 
 def adwaita_renames() -> dict[str, list[str]]:
@@ -100,10 +118,21 @@ def main() -> None:
     mapped: dict[str, tuple[str, str]] = {}  # xsi_name -> (source, method)
     unmapped: list[str] = []
 
+    # Stage 0: hand-curated overrides (verified against the artwork).
+    manual = overrides()
+    for xsi_name, papirus_name in manual.items():
+        if xsi_name not in names:
+            sys.exit(f"error: override {xsi_name} is not an upstream icon")
+        if papirus_name not in inventory:
+            sys.exit(f"error: override target {papirus_name} not in Papirus")
+        mapped[xsi_name] = (papirus_name, "manual-copy")
+
     # Stage 1: exact name matches (with rtl fallback to mirroring).
     for xsi_name in names:
         assert xsi_name.startswith("xsi-"), xsi_name
-        base = xsi_name[len("xsi-") :]
+        if xsi_name in mapped:
+            continue
+        base = xsi_name[len("xsi-"):]
 
         if base in inventory:
             mapped[xsi_name] = (base, "copy")
@@ -159,7 +188,7 @@ def main() -> None:
             # keep only the base method; origin becomes "alias"
             method = (
                 method.split("-", 1)[1]
-                if method.startswith(("alias-", "adwaita-", "xapp-"))
+                if method.startswith(("manual-", "alias-", "adwaita-", "xapp-"))
                 else method
             )
             mapped[xsi_name] = (source, f"alias-{method}")
@@ -188,6 +217,7 @@ def main() -> None:
 
     copies = sum(1 for r in rows if r[2] == "copy")
     flips = sum(1 for r in rows if r[2] == "rtl-flip")
+    manual = sum(1 for r in rows if r[2].startswith("manual-"))
     adwaita = sum(1 for r in rows if r[2].startswith("adwaita-"))
     xapp = sum(1 for r in rows if r[2].startswith("xapp-"))
     aliases = sum(1 for r in rows if r[2].startswith("alias-"))
@@ -195,6 +225,7 @@ def main() -> None:
     print(f"upstream icon names   : {total}")
     print(f"mapped (exact copy)   : {copies}")
     print(f"mapped (rtl flip)     : {flips}")
+    print(f"mapped (manual)       : {manual}")
     print(f"mapped (adwaita name) : {adwaita}")
     print(f"mapped (xapp name)    : {xapp}")
     print(f"mapped (via alias)    : {aliases}")

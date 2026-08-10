@@ -1,0 +1,10 @@
+# Hand-curated mappings, verified by comparing artwork. These take
+# precedence over all automatic matching stages.
+#
+# Columns: xsi_name <TAB> papirus_name
+#
+# XSI "direction-left/right" describe the arrow direction; Papirus names the
+# same icons by text flow ("ltr" arrow points right, "rtl" arrow points
+# left). Verified by rendering both sets side by side.
+xsi-format-text-direction-left-symbolic.svg	format-text-direction-rtl-symbolic.svg
+xsi-format-text-direction-right-symbolic.svg	format-text-direction-ltr-symbolic.svg

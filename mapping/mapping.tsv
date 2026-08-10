@@ -233,7 +233,8 @@ xsi-format-justify-fill-symbolic.svg	format-justify-fill-symbolic.svg	copy	16x16
 xsi-format-justify-left-symbolic.svg	format-justify-left-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
 xsi-format-justify-right-symbolic.svg	format-justify-right-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
 xsi-format-text-bold-symbolic.svg	format-text-bold-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
-xsi-format-text-direction-right-symbolic.svg	format-text-direction-symbolic.svg	adwaita-copy	16x16:actions,22x22:actions,24x24:actions
+xsi-format-text-direction-left-symbolic.svg	format-text-direction-rtl-symbolic.svg	manual-copy	16x16:actions,22x22:actions,24x24:actions
+xsi-format-text-direction-right-symbolic.svg	format-text-direction-ltr-symbolic.svg	manual-copy	16x16:actions,22x22:actions,24x24:actions
 xsi-format-text-italic-symbolic.svg	format-text-italic-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
 xsi-format-text-strikethrough-symbolic.svg	format-text-strikethrough-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
 xsi-format-text-underline-symbolic.svg	format-text-underline-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions

@@ -14,7 +14,6 @@ xsi-eye-symbolic.svg
 xsi-fan-symbolic.svg
 xsi-folder-recent-symbolic.svg
 xsi-folder-warning-symbolic.svg
-xsi-format-text-direction-left-symbolic.svg
 xsi-format-text-highlight-symbolic.svg
 xsi-format-text-plaintext-symbolic.svg
 xsi-format-text-rich-symbolic.svg
