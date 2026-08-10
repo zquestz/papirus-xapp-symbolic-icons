@@ -1,0 +1,6 @@
+# makepkg build artifacts (dist/PKGBUILD)
+dist/src/
+dist/pkg/
+dist/papirus-xapp-symbolic-icons/
+dist/*.pkg.tar.*
+dist/*.log
