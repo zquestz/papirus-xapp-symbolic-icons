@@ -2,6 +2,11 @@ PREFIX    ?= /usr
 ICONDIR    = $(DESTDIR)$(PREFIX)/share/icons
 USERICONDIR = $(HOME)/.local/share/icons
 
+# Papirus-Dark and Papirus-Light reach our icons through symlinks into
+# Papirus, but each variant has its own icon-theme.cache; all three must be
+# refreshed or the variants keep serving stale lookups that miss our icons.
+VARIANTS = Papirus Papirus-Dark Papirus-Light
+
 .PHONY: all icons install install-user uninstall uninstall-user
 
 all: icons
@@ -17,18 +22,26 @@ icons:
 install:
 	mkdir -p $(ICONDIR)/Papirus
 	cp -r icons/Papirus/. $(ICONDIR)/Papirus/
-	-gtk-update-icon-cache -q -t -f $(ICONDIR)/Papirus
+	for t in $(VARIANTS); do \
+		test -f $(ICONDIR)/$$t/index.theme && gtk-update-icon-cache -q -t -f $(ICONDIR)/$$t || :; \
+	done
 
 # Per-user install: icon lookup merges this with the system Papirus theme.
 install-user:
 	mkdir -p $(USERICONDIR)/Papirus
 	cp -r icons/Papirus/. $(USERICONDIR)/Papirus/
-	-gtk-update-icon-cache -q -t -f $(USERICONDIR)/Papirus
+	for t in $(VARIANTS); do \
+		test -f $(USERICONDIR)/$$t/index.theme && gtk-update-icon-cache -q -t -f $(USERICONDIR)/$$t || :; \
+	done
 
 uninstall:
 	find $(ICONDIR)/Papirus -name 'xsi-*.svg' -delete 2>/dev/null || true
-	-gtk-update-icon-cache -q -t -f $(ICONDIR)/Papirus
+	for t in $(VARIANTS); do \
+		test -f $(ICONDIR)/$$t/index.theme && gtk-update-icon-cache -q -t -f $(ICONDIR)/$$t || :; \
+	done
 
 uninstall-user:
 	find $(USERICONDIR)/Papirus -name 'xsi-*.svg' -delete 2>/dev/null || true
-	-gtk-update-icon-cache -q -t -f $(USERICONDIR)/Papirus
+	for t in $(VARIANTS); do \
+		test -f $(USERICONDIR)/$$t/index.theme && gtk-update-icon-cache -q -t -f $(USERICONDIR)/$$t || :; \
+	done
