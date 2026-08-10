@@ -14,8 +14,8 @@ Papirus-styled icons before falling back to hicolor.
 
 ## Coverage
 
-**626 of the 666 XSI icon names (94%)** are currently provided. The
-remaining 40 have no Papirus equivalent yet; they are listed in
+**628 of the 666 XSI icon names (94%)** are currently provided. The
+remaining 38 have no Papirus equivalent yet; they are listed in
 `mapping/unmapped.txt` and will keep resolving to the stock XSI artwork in
 hicolor until they are themed.
 

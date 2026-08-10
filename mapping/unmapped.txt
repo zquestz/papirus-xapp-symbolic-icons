@@ -1,8 +1,6 @@
 xsi-annotations-squiggly-symbolic.svg
 xsi-annotations-text-symbolic.svg
-xsi-applications-electronics-symbolic.svg
 xsi-applications-preferences-symbolic.svg
-xsi-applications-wine-symbolic.svg
 xsi-auth-face-symbolic.svg
 xsi-bluetooth-acquiring-symbolic.svg
 xsi-boot-menu-symbolic.svg

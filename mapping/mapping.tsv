@@ -11,6 +11,7 @@ xsi-applications-accessories-symbolic.svg	applications-utilities-symbolic.svg	al
 xsi-applications-administration-symbolic.svg	applications-system-symbolic.svg	alias-copy	16x16:categories,22x22:categories,24x24:categories
 xsi-applications-development-symbolic.svg	applications-development-symbolic.svg	copy	16x16:categories,22x22:categories,24x24:categories
 xsi-applications-education-symbolic.svg	applications-education-symbolic.svg	copy	16x16:categories,22x22:categories,24x24:categories
+xsi-applications-electronics-symbolic.svg	cpu-symbolic.svg	manual-copy	16x16:devices,22x22:devices,24x24:devices
 xsi-applications-engineering-symbolic.svg	applications-engineering-symbolic.svg	copy	16x16:categories,22x22:categories,24x24:categories
 xsi-applications-games-symbolic.svg	applications-games-symbolic.svg	copy	16x16:categories,22x22:categories,24x24:categories
 xsi-applications-graphics-symbolic.svg	applications-graphics-symbolic.svg	copy	16x16:categories,22x22:categories,24x24:categories
@@ -22,6 +23,7 @@ xsi-applications-science-symbolic.svg	applications-science-symbolic.svg	copy	16x
 xsi-applications-system-symbolic.svg	applications-system-symbolic.svg	copy	16x16:categories,22x22:categories,24x24:categories
 xsi-applications-utilities-symbolic.svg	applications-utilities-symbolic.svg	copy	16x16:categories,22x22:categories,24x24:categories
 xsi-applications-webapps-symbolic.svg	weather-overcast-symbolic.svg	alias-copy	16x16:status,22x22:status,24x24:status
+xsi-applications-wine-symbolic.svg	wine-symbolic.svg	manual-copy	16x16:apps,22x22:apps,24x24:apps
 xsi-appointment-missed-symbolic.svg	appointment-missed-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-appointment-new-symbolic.svg	appointment-new-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
 xsi-appointment-soon-symbolic.svg	appointment-soon-symbolic.svg	copy	16x16:status,22x22:status,24x24:status

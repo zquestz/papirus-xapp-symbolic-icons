@@ -10,6 +10,11 @@ xsi-format-text-direction-left-symbolic.svg	format-text-direction-rtl-symbolic.s
 xsi-format-text-direction-right-symbolic.svg	format-text-direction-ltr-symbolic.svg
 
 # Same concept under a different name; each pair compared visually.
+# Note: applications-electronics duplicates cpu-symbolic (already used by
+# xsi-cpu); acceptable since XSI's own two chips are near-identical and the
+# names are used in different UIs (software categories vs hardware).
+xsi-applications-electronics-symbolic.svg	cpu-symbolic.svg
+xsi-applications-wine-symbolic.svg	wine-symbolic.svg
 xsi-battery-action-symbolic.svg	battery-caution-symbolic.svg
 xsi-eye-symbolic.svg	feather-eye-symbolic.svg
 xsi-fan-symbolic.svg	sensors-fan-symbolic.svg
@@ -23,5 +28,8 @@ xsi-user-favorites-symbolic.svg	favorite-symbolic.svg
 # - xsi-network-vpn-disabled: the only candidate (network-vpn-disconnected)
 #   is already used by xsi-network-vpn-disconnected; mapping both would make
 #   two distinct states indistinguishable.
-# - xsi-preferences: XSI uses sliders; Papirus has no slider-style
-#   preferences icon, only gears (which would clash with xsi-cog et al).
+# - xsi-preferences (and its byte-identical alias xsi-applications-
+#   preferences): XSI uses sliders; Papirus has no slider-style preferences
+#   icon, only gears (which would clash with xsi-cog et al). If Papirus ever
+#   gains one, mapping xsi-preferences here will map both via the alias
+#   stage.
