@@ -18,7 +18,8 @@ equivalence data -- still no artistic judgment on our side:
   table (used by their migration script). If Papirus has the old adwaita
   name, upstream itself declared it equivalent.
 * xapp- prefix: XSI succeeded the old xapp-* icon names, which Papirus
-  already ships (xapp-foo-symbolic -> xsi-foo-symbolic).
+  already ships (xapp-foo-symbolic -> xsi-foo-symbolic, including the
+  xapp-prefs-foo-symbolic names used by XApp preference dialogs).
 * alias groups: upstream ships byte-identical artwork under multiple
   names; any name in a group inherits its mapped sibling's source.
 
@@ -147,7 +148,7 @@ def main() -> None:
 
     # Stage 2: upstream rename data. Try, in order:
     #   a. old adwaita names from xsi-adwaita-symbolic.info (file order)
-    #   b. the old xapp-* name (xsi-foo <- xapp-foo)
+    #   b. the old xapp-* names (xsi-foo <- xapp-foo | xapp-prefs-foo)
     # Each candidate is used directly if Papirus has it; -rtl names fall
     # back to mirroring the candidate's LTR icon, as in stage 1.
     renames = adwaita_renames()
@@ -160,6 +161,7 @@ def main() -> None:
 
         candidates = [f"{old}-symbolic" for old in renames.get(stem, [])]
         candidates.append(f"xapp-{stem}-symbolic")
+        candidates.append(f"xapp-prefs-{stem}-symbolic")
 
         for origin, candidate in [
             ("adwaita", c) if not c.startswith("xapp-") else ("xapp", c)

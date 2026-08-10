@@ -46,6 +46,7 @@ xsi-audio-volume-overamplified-symbolic.svg	audio-volume-overamplified-symbolic.
 xsi-audio-x-generic-symbolic.svg	audio-x-generic-symbolic.svg	copy	16x16:mimetypes,22x22:mimetypes,24x24:mimetypes
 xsi-avatar-default-symbolic.svg	avatar-default-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-battery-ac-symbolic.svg	ac-adapter-symbolic.svg	adwaita-copy	16x16:devices,22x22:devices,24x24:devices
+xsi-battery-action-symbolic.svg	battery-caution-symbolic.svg	manual-copy	16x16:status,22x22:status,24x24:status
 xsi-battery-caution-symbolic.svg	battery-caution-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-battery-level-0-charging-symbolic.svg	battery-level-0-charging-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-battery-level-0-symbolic.svg	battery-level-0-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
@@ -190,6 +191,7 @@ xsi-executable-symbolic.svg	application-x-executable-symbolic.svg	adwaita-copy	1
 xsi-exit-symbolic-rtl.svg	application-exit-symbolic.svg	adwaita-rtl-flip	16x16:actions,22x22:actions,24x24:actions
 xsi-exit-symbolic.svg	application-exit-symbolic.svg	adwaita-copy	16x16:actions,22x22:actions,24x24:actions
 xsi-extract-archive-symbolic.svg	extract-archive-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
+xsi-eye-symbolic.svg	feather-eye-symbolic.svg	manual-copy	16x16:actions,22x22:actions,24x24:actions
 xsi-face-plain-symbolic.svg	face-plain-symbolic.svg	copy	16x16:emotes
 xsi-face-sad-symbolic.svg	face-sad-symbolic.svg	copy	16x16:emotes
 xsi-face-smile-big-symbolic.svg	face-smile-big-symbolic.svg	copy	16x16:emotes
@@ -198,6 +200,7 @@ xsi-face-smirk-symbolic.svg	face-smirk-symbolic.svg	copy	16x16:emotes
 xsi-face-surprise-symbolic.svg	face-surprise-symbolic.svg	copy	16x16:emotes
 xsi-face-uncertain-symbolic.svg	face-uncertain-symbolic.svg	copy	16x16:emotes
 xsi-face-wink-symbolic.svg	face-wink-symbolic.svg	copy	16x16:emotes
+xsi-fan-symbolic.svg	sensors-fan-symbolic.svg	manual-copy	16x16:status,22x22:status,24x24:status
 xsi-favorite-symbolic.svg	favorite-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
 xsi-file-manager-symbolic.svg	system-file-manager-symbolic.svg	adwaita-copy	16x16:apps,22x22:apps,24x24:apps
 xsi-find-location-symbolic.svg	find-location-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
@@ -215,6 +218,7 @@ xsi-folder-new-symbolic.svg	folder-new-symbolic.svg	copy	16x16:actions,22x22:act
 xsi-folder-open-symbolic.svg	folder-open-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-folder-pictures-symbolic.svg	folder-pictures-symbolic.svg	copy	16x16:places,22x22:places,24x24:places
 xsi-folder-publicshare-symbolic.svg	folder-publicshare-symbolic.svg	copy	16x16:places,22x22:places,24x24:places
+xsi-folder-recent-symbolic.svg	document-open-recent-symbolic.svg	manual-copy	16x16:actions,22x22:actions,24x24:actions
 xsi-folder-remote-symbolic.svg	folder-remote-symbolic.svg	copy	16x16:places,22x22:places,24x24:places
 xsi-folder-saved-search-symbolic.svg	folder-saved-search-symbolic.svg	copy	16x16:places,22x22:places,24x24:places
 xsi-folder-symbolic.svg	folder-symbolic.svg	copy	16x16:places,22x22:places,24x24:places
@@ -346,9 +350,11 @@ xsi-microphone-sensitivity-medium-symbolic.svg	microphone-sensitivity-medium-sym
 xsi-microphone-sensitivity-muted-symbolic.svg	microphone-sensitivity-muted-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-modem-symbolic.svg	modem-symbolic.svg	copy	16x16:devices,22x22:devices,24x24:devices
 xsi-mount-archive-symbolic.svg	mount-archive-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
+xsi-move-symbolic.svg	object-move-symbolic.svg	manual-copy	16x16:actions,22x22:actions,24x24:actions
 xsi-multimedia-player-apple-ipod-touch-symbolic.svg	multimedia-player-apple-ipod-touch-symbolic.svg	copy	16x16:devices,22x22:devices,24x24:devices
 xsi-multimedia-player-symbolic.svg	multimedia-player-symbolic.svg	copy	16x16:devices,22x22:devices,24x24:devices
 xsi-multimedia-symbolic.svg	applications-multimedia-symbolic.svg	alias-copy	16x16:categories,22x22:categories,24x24:categories
+xsi-multitasking-symbolic.svg	org.gnome.Settings-multitasking-symbolic.svg	manual-copy	16x16:apps,22x22:apps,24x24:apps
 xsi-network-cellular-2g-symbolic.svg	network-cellular-2g-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-network-cellular-3g-symbolic.svg	network-cellular-3g-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-network-cellular-4g-symbolic.svg	network-cellular-4g-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
@@ -453,6 +459,7 @@ xsi-power-profile-performance-symbolic.svg	power-profile-performance-symbolic.sv
 xsi-power-profile-power-saver-symbolic-rtl.svg	power-profile-power-saver-symbolic.svg	rtl-flip	16x16:status,22x22:status,24x24:status
 xsi-power-profile-power-saver-symbolic.svg	power-profile-power-saver-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-power-symbolic.svg	power-symbolic.svg	copy	16x16:apps,22x22:apps,24x24:apps
+xsi-preview-symbolic.svg	xapp-prefs-preview-symbolic.svg	xapp-copy	16x16:actions,22x22:actions,24x24:actions
 xsi-printer-error-symbolic.svg	printer-error-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-printer-network-symbolic.svg	printer-network-symbolic.svg	copy	16x16:devices,22x22:devices,24x24:devices
 xsi-printer-printing-symbolic.svg	printer-printing-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
@@ -515,12 +522,14 @@ xsi-tablet-symbolic.svg	tablet-symbolic.svg	copy	16x16:devices,22x22:devices,24x
 xsi-tag-symbolic.svg	tag-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
 xsi-task-due-symbolic.svg	task-due-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-task-past-due-symbolic.svg	task-past-due-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
+xsi-temperature-symbolic.svg	sensors-temperature-symbolic.svg	manual-copy	16x16:status,22x22:status,24x24:status
 xsi-text-case-symbolic.svg	xapp-text-case-symbolic.svg	xapp-copy	16x16:actions,22x22:actions,24x24:actions
 xsi-text-editor-symbolic.svg	text-editor-symbolic.svg	copy	16x16:apps,22x22:apps,24x24:apps
 xsi-text-x-generic-symbolic.svg	text-x-generic-symbolic.svg	copy	16x16:mimetypes,22x22:mimetypes,24x24:mimetypes
 xsi-thunderbolt-acquiring-symbolic.svg	thunderbolt-acquiring-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-thunderbolt-symbolic.svg	thunderbolt-symbolic.svg	copy	16x16:devices,22x22:devices,24x24:devices
 xsi-time-symbolic.svg	preferences-system-time-symbolic.svg	adwaita-copy	16x16:apps,22x22:apps,24x24:apps
+xsi-toolbar-symbolic.svg	xapp-prefs-toolbar-symbolic.svg	xapp-copy	16x16:actions,22x22:actions,24x24:actions
 xsi-toolbox-symbolic.svg	preferences-other-symbolic.svg	adwaita-copy	16x16:categories,22x22:categories,24x24:categories
 xsi-tools-symbolic.svg	tools-symbolic.svg	copy	16x16:apps,22x22:apps,24x24:apps
 xsi-touch-disabled-symbolic.svg	touch-disabled-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
@@ -535,6 +544,7 @@ xsi-user-away-symbolic.svg	user-away-symbolic.svg	copy	16x16:status,22x22:status
 xsi-user-bookmarks-symbolic.svg	user-bookmarks-symbolic.svg	copy	16x16:places,22x22:places,24x24:places
 xsi-user-busy-symbolic.svg	user-busy-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-user-desktop-symbolic.svg	user-desktop-symbolic.svg	copy	16x16:places,22x22:places,24x24:places
+xsi-user-favorites-symbolic.svg	favorite-symbolic.svg	manual-copy	16x16:actions,22x22:actions,24x24:actions
 xsi-user-home-symbolic.svg	user-home-symbolic.svg	copy	16x16:places,22x22:places,24x24:places
 xsi-user-idle-symbolic.svg	user-idle-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-user-info-symbolic.svg	user-info-symbolic.svg	copy	16x16:apps,22x22:apps,24x24:apps

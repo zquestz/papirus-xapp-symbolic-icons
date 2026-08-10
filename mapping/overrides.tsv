@@ -8,3 +8,20 @@
 # left). Verified by rendering both sets side by side.
 xsi-format-text-direction-left-symbolic.svg	format-text-direction-rtl-symbolic.svg
 xsi-format-text-direction-right-symbolic.svg	format-text-direction-ltr-symbolic.svg
+
+# Same concept under a different name; each pair compared visually.
+xsi-battery-action-symbolic.svg	battery-caution-symbolic.svg
+xsi-eye-symbolic.svg	feather-eye-symbolic.svg
+xsi-fan-symbolic.svg	sensors-fan-symbolic.svg
+xsi-folder-recent-symbolic.svg	document-open-recent-symbolic.svg
+xsi-move-symbolic.svg	object-move-symbolic.svg
+xsi-multitasking-symbolic.svg	org.gnome.Settings-multitasking-symbolic.svg
+xsi-temperature-symbolic.svg	sensors-temperature-symbolic.svg
+xsi-user-favorites-symbolic.svg	favorite-symbolic.svg
+
+# Deliberately NOT mapped:
+# - xsi-network-vpn-disabled: the only candidate (network-vpn-disconnected)
+#   is already used by xsi-network-vpn-disconnected; mapping both would make
+#   two distinct states indistinguishable.
+# - xsi-preferences: XSI uses sliders; Papirus has no slider-style
+#   preferences icon, only gears (which would clash with xsi-cog et al).
