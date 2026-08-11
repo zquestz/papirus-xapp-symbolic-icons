@@ -44,8 +44,11 @@ XSI_INFO = (
 )
 PAPIRUS = REPO / "vendor" / "papirus-icon-theme" / "Papirus"
 
-# Real (non-symlink) symbolic directories in the Papirus theme. Other sizes
-# (32x32, symbolic-up-to-20, @2x) are symlinks to these and need no output.
+# Symbolic directories Papirus actually draws. 32x32 (and 32x32@2x) symlink
+# to 16x16/symbolic, and 16x16/symbolic-up-to-20 symlinks to its sibling, so
+# those inherit our output. The @2x dirs are real copies, not symlinks, and
+# get no output: these are SVGs, so a scale-2 lookup that misses @2x falls
+# back to the 1x directory and renders at the right size regardless.
 SIZES = ("16x16", "22x22", "24x24")
 
 MAPPING_TSV = REPO / "mapping" / "mapping.tsv"
