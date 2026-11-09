@@ -272,6 +272,7 @@ xsi-help-browser-symbolic.svg	help-browser-symbolic.svg	copy	16x16:apps,22x22:ap
 xsi-help-contents-symbolic.svg	help-contents-symbolic.svg	copy	16x16:apps,22x22:apps,24x24:apps
 xsi-help-faq-symbolic.svg	help-faq-symbolic.svg	copy	16x16:apps,22x22:apps,24x24:apps
 xsi-help-symbolic.svg	system-help-symbolic.svg	adwaita-copy	16x16:categories,22x22:categories,24x24:categories
+xsi-hourglass-symbolic.svg	hourglass-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
 xsi-image-crop-symbolic.svg	image-crop-symbolic.svg	copy	16x16:actions,22x22:actions,24x24:actions
 xsi-image-loading-symbolic.svg	image-loading-symbolic.svg	copy	16x16:status,22x22:status,24x24:status
 xsi-image-x-generic-symbolic.svg	image-x-generic-symbolic.svg	copy	16x16:mimetypes,22x22:mimetypes,24x24:mimetypes
